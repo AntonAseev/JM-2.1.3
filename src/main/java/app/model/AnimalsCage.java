@@ -1,6 +1,8 @@
 package app.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -8,6 +10,13 @@ public class AnimalsCage {
 
     @Autowired
     private Animal animal;
+
+    @Autowired
+    private Timer timer;
+
+    public Timer getTimer() {
+        return timer;
+    }
 
     public void whatAnimalSay() {
         System.out.println("Say:");
